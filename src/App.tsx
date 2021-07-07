@@ -3,33 +3,22 @@ import {
   HashRouter as Router,
   Route,
   Switch,
-  Link,
   Redirect,
 } from 'react-router-dom';
 import styled from "styled-components";
 import './index.scss'
+import Nav from './components/Nav'
 
 const Wrapper = styled.div`
-  border: 1px solid red;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 `
 const Main = styled.div`
-  border: 1px solid green;
   flex-grow: 1;
   overflow: auto;
 `
-const Nav = styled.nav`
-  >ul{
-    display: flex;
-    >li{
-      width: 33.3333%;
-      text-align: center;
-      padding: 16px;
-    }
-  }
-`
+
 
 
 function App() {
@@ -53,14 +42,7 @@ function App() {
                 </Route>
               </Switch>
             </Main>
-
-            <Nav>
-                <ul>
-                    <li><Link to="/tags">Home</Link></li>
-                    <li><Link to="/money">About</Link></li>
-                    <li><Link to="/statistics">User</Link></li>
-                </ul>
-            </Nav>
+            <Nav />
         </Wrapper>
     </Router>
   );
