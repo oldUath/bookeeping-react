@@ -9,6 +9,7 @@ import styled from "styled-components";
 import './index.scss'
 import Nav from './components/Nav'
 
+
 const Wrapper = styled.div`
   min-height: 100vh;
   display: flex;
