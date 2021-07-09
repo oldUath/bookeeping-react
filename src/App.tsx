@@ -27,6 +27,7 @@ function App() {
         <Redirect exact from="/" to="/money" />
         <Route path="*">
           <NoMatch />
+
         </Route>
       </Switch>
     </Router>
