@@ -1,11 +1,39 @@
 import Layout from "../components/Layout";
 import React from "react";
 import styled from "styled-components";
-const TagSection = styled.section`
 
-`
+const TagsSection = styled.section`
+  background: #FFFFFF; padding: 12px 16px;
+  > ol { margin: 0 -12px;
+    > li{
+       background: #D9D9D9; border-radius: 18px;
+       display:inline-block; padding: 3px 18px; 
+       font-size: 14px; margin: 8px 12px;
+    }
+  }
+  > button{
+    background:none; border: none; padding: 2px 4px;
+    border-bottom: 1px solid #333; color: #666;
+    margin-top: 8px;
+  }
+`;
+
 const NotesSection = styled.section`
-
+  background: #f5f5f5;
+  padding: 0 16px;
+  font-size: 14px;
+  > label {
+    display:flex;
+    align-items: center;
+    > span { margin-right: 16px; white-space: nowrap; }
+    > input {
+      display:block;
+      width: 100%;
+      height: 72px;
+      background: none;
+      border: none;
+    }
+  }
 `
 const CategorySection = styled.section`
 
@@ -17,7 +45,7 @@ const NumberPadSection = styled.section`
 function Money(){
   return(
     <Layout>
-      <TagSection>
+      <TagsSection>
         <ol>
           <li>衣</li>
           <li>食</li>
@@ -25,11 +53,11 @@ function Money(){
           <li>行</li>
         </ol>
         <button>新增标签</button>
-      </TagSection>
+      </TagsSection>
       <NotesSection>
         <label>
           <span>备注</span>
-          <input type='texxt'/>
+          <input type='texxt' placeholder="在这里添加备注"/>
         </label>
       </NotesSection>
       <CategorySection>
